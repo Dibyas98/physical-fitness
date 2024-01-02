@@ -1,0 +1,63 @@
+.switch-cont{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: relative;
+    /* right: 50px; */
+    /* ;
+    ;
+    ;
+     */
+     padding: 20px 50px;
+     position: fixed;
+     
+}
+.switch{
+    position: relative;
+    width: 3.5rem;
+    height: 1.5rem;
+    background-color: black;
+    display: inline-block;
+    border-radius: 20px;
+    
+    transition: all 0.3s linear;
+    
+}
+.switch::after{
+    position: absolute;
+    top: 0.125rem;
+    left: 0.125rem;
+    content: "";
+    background-color: aliceblue;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+    float: right;
+    
+}
+#checkbox:checked + .switch::after{
+    translate: 2rem;
+}
+#checkbox:checked + .switch{
+    background-color: aqua;
+}
+#checkbox{
+    display: none;
+}
+
+@media screen and (max-width: 426px){
+    .switch{
+        width: 2.5rem;
+        height: 1rem;
+    }
+    .switch::after{
+        width: .8rem;
+        height: 0.8rem;
+    }
+    #checkbox:checked + .switch::after{
+        translate: 1.5rem;
+    }
+}

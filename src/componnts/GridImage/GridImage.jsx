@@ -7,9 +7,13 @@ import st4 from './Assects/4.jpg'
 import st5 from './Assects/5.webp'
 import st6 from './Assects/6.avif'
 
-export default function GridImage() {
+export default function GridImage({dark}) {
+  const set={
+    backgroundColor:'black',
+    color:'white'
+  }
   return (
-    <div className='gridImage-cont'>
+    <div style={dark?set:{}} className='gridImage-cont'>
       <div>
         <img src={st1} alt="" className='w-full h-full'/>
       </div>
